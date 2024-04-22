@@ -1,0 +1,28 @@
+<div class="container">
+ <div class="card"></div>
+</div>
+
+<script>
+ var container = document.querySelector(".container")
+
+ // container에서 마우스 움직이는 이벤트 발생 시 :
+ container.addEventListener("mousemove", function (e) {
+  var x = e.offsetX
+  var y = e.offsetY
+  var rotateY = (-1 / 5) * x + 20
+  // Y축을 기준으로 회전하라
+  container.style = `transform : rotateY(${rotateY}deg)`
+ })
+</script>
+
+<style>
+ .container {
+  width: 220px;
+  height: 310px;
+ }
+
+ .card {
+  width: 220px;
+  height: 310px;
+ }
+</style>
